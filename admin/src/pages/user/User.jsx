@@ -8,8 +8,12 @@ import {
 } from "@material-ui/icons";
 import { Link } from "react-router-dom";
 import "./user.css";
-
+import axios from 'axios';
+import { useEffect } from "react";
 export default function User() {
+
+ 
+
   return (
     <div className="user">
       <div className="userTitleContainer">

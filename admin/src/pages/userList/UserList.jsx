@@ -3,17 +3,32 @@ import { DataGrid } from "@material-ui/data-grid";
 import { DeleteOutline } from "@material-ui/icons";
 import { userRows } from "../../dummyData";
 import { Link } from "react-router-dom";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import axios from 'axios';
+import { userRequest } from "../../requestMethods";
 
 export default function UserList() {
-  const [data, setData] = useState(userRows);
+  const [data, setData] = useState([]);
+
+  async function getUser() {
+   
+  }
+
+  useEffect( async () => {
+    try {
+      const {data} = await userRequest.get('/users');
+     setData(data)
+    } catch (error) {
+      console.error(error);
+    }
+  },[data])
 
   const handleDelete = (id) => {
     setData(data.filter((item) => item.id !== id));
   };
   
   const columns = [
-    { field: "id", headerName: "ID", width: 90 },
+    { field: "_id", headerName: "ID", width: 90 },
     {
       field: "user",
       headerName: "User",
@@ -64,6 +79,7 @@ export default function UserList() {
         rows={data}
         disableSelectionOnClick
         columns={columns}
+        getRowId={(row) => row._id}
         pageSize={8}
         checkboxSelection
       />
