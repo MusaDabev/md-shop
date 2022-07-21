@@ -1,8 +1,19 @@
 import React from "react";
 import "./topbar.css";
 import { NotificationsNone, Language, Settings } from "@material-ui/icons";
+import { Link } from "react-router-dom";
+import {useDispatch} from 'react-redux';
+import { logout } from "../../redux/userRedux";
 
 export default function Topbar() {
+
+  const dispatch = useDispatch();
+
+  const logoutHandler = () => {
+    dispatch(
+      logout()
+    )
+  }
   return (
     <div className="topbar">
       <div className="topbarWrapper">
@@ -21,6 +32,7 @@ export default function Topbar() {
           <div className="topbarIconContainer">
             <Settings />
           </div>
+          <Link to="/logout" onClick={logoutHandler}> logout </Link>
           <img src="https://images.pexels.com/photos/1526814/pexels-photo-1526814.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" alt="" className="topAvatar" />
         </div>
       </div>
