@@ -1,18 +1,12 @@
 import "./userList.css";
 import { DataGrid } from "@material-ui/data-grid";
 import { DeleteOutline } from "@material-ui/icons";
-import { userRows } from "../../dummyData";
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
-import axios from 'axios';
 import { userRequest } from "../../requestMethods";
 
 export default function UserList() {
   const [data, setData] = useState([]);
-
-  async function getUser() {
-   
-  }
 
   useEffect( async () => {
     try {

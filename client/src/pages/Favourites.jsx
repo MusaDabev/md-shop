@@ -1,6 +1,6 @@
 import React from "react";
 import Footer from "../components/Footer";
-import Navbar from "../components/Navbar";
+import Navbar from "../components/Navbar/Navbar";
 import styled from "styled-components";
 import { useSelector, useDispatch } from "react-redux";
 import Announcement from "../components/Announcement";

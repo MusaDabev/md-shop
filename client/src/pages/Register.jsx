@@ -1,5 +1,9 @@
 import styled from "styled-components";
 import { mobile } from "../responsive";
+import { useRef } from "react";
+import axios from "axios";
+import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const Container = styled.div`
   width: 100vw;
@@ -54,23 +58,72 @@ const Button = styled.button`
   cursor: pointer;
 `;
 
+const SuccessMessage = styled.div`
+  color: green;
+  font-size: 1.2rem;
+`
+const GoToRegisterPage = styled.div`
+  
+
+`
+
 const Register = () => {
+
+  const [succes, setSucces] = useState(false);
+  const [successMess, setSuccessMess] = useState('')
+
+  const firstNameRef = useRef();
+  const lastNameRef = useRef();
+  const usernameRef = useRef();
+  const emailRef = useRef();
+  const passwordRef = useRef();
+
+  const submitHandler = async (e) => {
+    e.preventDefault();
+    const firstName = firstNameRef.current.value;
+    const lastName = lastNameRef.current.value;
+    const username = usernameRef.current.value;
+    const email = emailRef.current.value;
+    const password = passwordRef.current.value;
+
+   
+    let res = await axios.post ("http://localhost:5000/api/auth/register", {
+        firstName,
+        lastName,
+        username,
+        email,
+        password,
+      })
+
+      let status = res.status;
+
+      if (status === 201) {
+        setSucces(true)
+        setSuccessMess('You have successfuly registered!')
+      }
+    
+      
+    
+  }
+
   return (
     <Container>
       <Wrapper>
         <Title>CREATE AN ACCOUNT</Title>
-        <Form>
-          <Input placeholder="name" />
-          <Input placeholder="last name" />
-          <Input placeholder="username" />
-          <Input placeholder="email" />
-          <Input placeholder="password" />
-          <Input placeholder="confirm password" />
+        {succes && <SuccessMessage>{successMess}</SuccessMessage>}
+        {succes && <Link to="/login">Login</Link>}
+        <Form onSubmit={submitHandler}>
+          <Input type="text" placeholder="first name" name="firstName" ref={firstNameRef} />
+          <Input type="text" placeholder="last name" name="lastName" ref={lastNameRef} />
+          <Input type="text" placeholder="username" name="username" ref={usernameRef}  />
+          <Input type="email" placeholder="email"  name="email" ref={emailRef} />
+          <Input type="password" placeholder="password" name="password" ref={passwordRef} />
           <Agreement>
             By creating an account, I consent to the processing of my personal
             data in accordance with the <b>PRIVACY POLICY</b>
           </Agreement>
-          <Button>CREATE</Button>
+          <GoToRegisterPage>You have an account? Go to <Link to="/login">Login</Link> page</GoToRegisterPage>
+          <Button type="submit">CREATE</Button>
         </Form>
       </Wrapper>
     </Container>

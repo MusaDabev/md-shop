@@ -13,6 +13,7 @@ import {
 import Success from "./pages/Success";
 import { useSelector } from "react-redux";
 import Favourites from "./pages/Favourites";
+import Profile from "./pages/Profile";
 
 
 const App = () => {
@@ -37,6 +38,9 @@ const App = () => {
         </Route>
         <Route path="/success">
           <Success />
+        </Route>
+        <Route path="/profile">
+          <Profile />
         </Route>
         <Route path="/login">{user ? <Redirect to="/" /> : <Login />}</Route>
         <Route path="/register">

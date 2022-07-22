@@ -3,9 +3,10 @@ import { Search, ShoppingCartOutlined } from "@material-ui/icons";
 import { GrFavorite } from 'react-icons/gr';
 import React from "react";
 import styled from "styled-components";
-import { mobile } from "../responsive";
+import { mobile } from "../../responsive";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
+import SettingsDropDown from "./SettingsDropDown";
 
 const Container = styled.div`
   height: 60px;
@@ -122,6 +123,7 @@ const Navbar = () => {
               </Badge>
             </MenuItem>
           </Link>
+          <SettingsDropDown />
         </Right>
       </Wrapper>
     </Container>
