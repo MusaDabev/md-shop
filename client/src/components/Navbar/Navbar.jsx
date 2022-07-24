@@ -74,6 +74,7 @@ const Navbar = () => {
   const cartQuantity = useSelector((state) => state.cart.products.length);
   const favQuantity = useSelector((state) => state.favourite.products.length);
   const user = useSelector((state) => state.user.currentUser);
+ 
   
   return (
     <Container>
@@ -123,7 +124,7 @@ const Navbar = () => {
               </Badge>
             </MenuItem>
           </Link>
-          <SettingsDropDown />
+        {user && <SettingsDropDown /> }  
         </Right>
       </Wrapper>
     </Container>

@@ -226,7 +226,7 @@ const Cart = () => {
         <Top>
          <Link to={"/"} > <TopButton>ПРОДЪЛЖИ ПАЗАРУВАНЕТО</TopButton>  </Link> 
           <TopTexts>
-            <TopText>Кошница({cart.quantity})</TopText>
+            <TopText>Кошница({cart.products.length})</TopText>
             <TopText>Your Wishlist (0)</TopText>
           </TopTexts>
           <TopButton type="filled">Плащане</TopButton>
