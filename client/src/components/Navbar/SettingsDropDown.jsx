@@ -7,6 +7,10 @@ import DropdownMenu from "./DropdownMenu";
 const SettingsDropDownContainer = styled.div`
   margin-left: 15px;
   flex: 0.5;
+
+  @media only screen and (max-width: 515px) {
+    display: none;
+  }
 `;
 const SettingsButtonContainer = styled.div`
   display: flex;

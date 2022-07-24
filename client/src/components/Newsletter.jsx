@@ -11,16 +11,25 @@ const Container = styled.div`
   flex-direction: column;
 `;
 const Title = styled.h1`
-  font-size: 70px;
+  font-size: 10vw;
   margin-bottom: 20px;
+
+  @media screen and (min-width: 864px) {
+    font-size: 70px;
+  }
+  
 `;
 
 const Desc = styled.div`
   font-size: 24px;
   font-weight: 300;
   margin-bottom: 20px;
-  ${mobile({ textAlign: "center" })}
 
+  @media screen and (max-width: 893px) {
+    margin-left: 10px;
+    margin-right: 10px;
+    text-align: center;
+  }
 `;
 
 const InputContainer = styled.div`

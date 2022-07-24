@@ -7,6 +7,11 @@ const Container = styled.div`
   display: flex;
   padding: 20px;
   justify-content: space-between;
+
+  @media only screen and (max-width: 768px) {
+    flex-direction: column;
+  }
+
   ${mobile({ padding: "0px", flexDirection:"column" })}
 
 `;

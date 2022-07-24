@@ -12,6 +12,11 @@ import { mobile } from "../responsive";
 
 const Container = styled.div`
   display: flex;
+
+  @media only screen and (max-width: 768px) {
+   flex-wrap: wrap;
+  }
+
   ${mobile({ flexDirection: "column" })}
 `;
 
@@ -55,8 +60,6 @@ const List = styled.ul`
   margin: 0;
   padding: 0;
   list-style: none;
-  display: flex;
-  flex-wrap: wrap;
 `;
 
 const ListItem = styled.li`

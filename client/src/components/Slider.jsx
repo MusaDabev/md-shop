@@ -11,6 +11,10 @@ const Container = styled.div`
   position: relative;
   overflow: hidden;
   ${mobile({ display: "none" })}
+
+  @media only screen and (max-width: 800px) {
+    display: none;
+  }
 `;
 
 const Arrow = styled.div`
@@ -54,11 +58,11 @@ const ImgContainer = styled.div`
 
 const Image = styled.img`
   height: 80%;
-  width: 500px;
+  width: 100%;
 `;
 
 const InfoContainer = styled.div`
-  flex: 1;
+  flex: 0.5;
   padding: 50px;
 `;
 

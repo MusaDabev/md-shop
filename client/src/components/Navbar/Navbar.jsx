@@ -9,8 +9,8 @@ import { Link } from "react-router-dom";
 import SettingsDropDown from "./SettingsDropDown";
 
 const Container = styled.div`
-  height: 60px;
-  ${mobile({ height: "50px" })}
+
+
 `;
 
 const Wrapper = styled.div`
@@ -18,6 +18,9 @@ const Wrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+ 
+
   ${mobile({ padding: "10px 0px" })}
 `;
 
@@ -43,6 +46,9 @@ const SearchContainer = styled.div`
 
 const Input = styled.input`
   border: none;
+  @media only screen and (max-width: 590px) {
+    width: 90px;
+  }
   ${mobile({ width: "50px" })}
 `;
 
