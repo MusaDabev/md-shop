@@ -19,6 +19,11 @@ const Container = styled.div``;
 
 const Wrapper = styled.div`
   padding: 20px;
+  @media only screen and (max-width: 868px) {
+   display: flex;
+   flex-direction: column;
+
+  }
   ${mobile({ padding: "10px" })}
 `;
 
@@ -45,33 +50,50 @@ const TopButton = styled.button`
 `;
 
 const TopTexts = styled.div`
+  @media only screen and (max-width: 550px) {
+  display: flex;
+   flex-direction: column;
+  }
   ${mobile({ display: "none" })}
 `;
 const TopText = styled.span`
   text-decoration: underline;
   cursor: pointer;
-  margin: 0px 10px;
+  margin: 2px 10px;
 `;
 
 const Bottom = styled.div`
   display: flex;
   justify-content: space-between;
-  ${mobile({ flexDirection: "column" })}
+  @media only screen and (max-width: 868px) {
+   
+   flex-direction: column;
+  }
+
 `;
 
 const Info = styled.div`
   flex: 3;
+  
 `;
 
 const Product = styled.div`
   display: flex;
   justify-content: space-between;
-  ${mobile({ flexDirection: "column" })}
+  @media only screen and (max-width: 580px) {
+   
+   flex-direction: column;
+  }
 `;
 
 const ProductDetail = styled.div`
   flex: 2;
   display: flex;
+  @media only screen and (max-width: 580px) {
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+  }
 `;
 
 const Image = styled.img`
@@ -229,7 +251,7 @@ const Cart = () => {
             <TopText>Кошница({cart.products.length})</TopText>
             <TopText>Your Wishlist (0)</TopText>
           </TopTexts>
-          <TopButton type="filled">Плащане</TopButton>
+        
         </Top>
         <Bottom>
           <Info>

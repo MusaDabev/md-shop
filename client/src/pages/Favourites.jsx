@@ -12,23 +12,31 @@ const Container = styled.div``;
 
 const Wrapper = styled.div`
   padding: 20px;
+
   ${mobile({ padding: "10px" })}
 `;
 
 const Info = styled.div`
   flex: 3;
+ 
 `;
 
 const Product = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  ${mobile({ flexDirection: "column" })}
+  @media only screen and (max-width: 644px) {
+   flex-direction: column;
+  }
 `;
 
 const ProductDetail = styled.div`
   flex: 2;
   display: flex;
+  @media only screen and (max-width: 500px) {
+    
+   flex-direction: column;
+  }
 `;
 
 const Image = styled.img`
