@@ -17,7 +17,10 @@ const Container = styled.div``;
 const Wrapper = styled.div`
   padding: 50px;
   display: flex;
-  ${mobile({ padding: "10px", flexDirection: "column" })}
+  @media only screen and (max-width: 768px) {
+   flex-direction: column;
+  }
+  ${mobile({ padding: "10px", })}
 `;
 
 const ImgContainer = styled.div`
@@ -28,12 +31,22 @@ const Image = styled.img`
   width: 100%;
   height: 90vh;
   object-fit: cover;
+  @media only screen and (max-width: 768px) {
+   height: 60vh;
+  }
   ${mobile({ height: "40vh" })}
 `;
 
 const InfoContainer = styled.div`
   flex: 1;
+  display: flex;
+  flex-direction: column;
   padding: 0px 50px;
+  justify-content: center;
+  align-items: center;
+  @media only screen and (max-width: 768px) {
+   padding: 0px;
+  }
   ${mobile({ padding: "10px" })}
 `;
 
@@ -89,6 +102,10 @@ const AddContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  @media only screen and (max-width: 768px) {
+   width: 80%;
+  }
   ${mobile({ width: "100%" })}
 `;
 
