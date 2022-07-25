@@ -19,7 +19,7 @@ State management:
 Payment:
 - Strype
 
-Link to the website: https://md-shop.netlify.app/
+Live version: https://md-shop.netlify.app/
 
 Show your support
 
