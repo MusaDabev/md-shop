@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { logout } from "../../redux/userRedux";
 import { clearCart } from "../../redux/cartRedux";
@@ -27,6 +27,9 @@ const ListItem = styled.li`
   &:hover {
     background-color: #646463;
   }
+  &.active {
+    background-color: #646463;
+  }
 `;
 const LogoutButton = styled.button`
   border: none;
@@ -39,6 +42,9 @@ const LogoutButton = styled.button`
     background-color: #646463;
   }
 `;
+
+
+
 
 function DropdownMenu() {
   const dispatch = useDispatch();
@@ -57,7 +63,7 @@ function DropdownMenu() {
         </Link>
       </ListItem>
       <ListItem>
-        <Link to="" style={{ textDecoration: "none", color: "white" }}>
+        <Link to="" >
           Menu
         </Link>
       </ListItem>

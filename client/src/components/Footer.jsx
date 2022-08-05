@@ -105,21 +105,21 @@ const Footer = () => {
         </SocialContainer>
       </Left>
       <Center>
-        <Title>Полезни линкове</Title>
+        <Title>Links</Title>
         <List>
-          <ListItem>Начло</ListItem>
-          <ListItem>Количка</ListItem>
-          <ListItem>Мъжка мода</ListItem>
-          <ListItem>Дамска мода</ListItem>
-          <ListItem>Аксесоари</ListItem>
-          <ListItem>Моят профил</ListItem>
-          <ListItem>Проследи поръчка</ListItem>
-          <ListItem>Любими</ListItem>
-          <ListItem>Условия</ListItem>
+          <ListItem>Home</ListItem>
+          <ListItem>Cart</ListItem>
+          <ListItem>Men</ListItem>
+          <ListItem>Women</ListItem>
+          <ListItem>Accessories</ListItem>
+          <ListItem>My profile</ListItem>
+          <ListItem>Track order</ListItem>
+          <ListItem>Favourites</ListItem>
+          <ListItem>Conditions</ListItem>
         </List>
       </Center>
       <Right>
-        <Title>За контакт:</Title>
+        <Title>Contact:</Title>
         <ContactItem>
           <Room style={{marginRight:"10px"}}/> Sofiq, bul. Bulgaria
         </ContactItem>

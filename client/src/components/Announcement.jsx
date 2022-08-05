@@ -12,7 +12,7 @@ const Container = styled.div`
 `;
 
 const Announcement = () => {
-  return <Container>Супер промоция! Безплатна доставка за поръчки над 50 лв !!!</Container>;
+  return <Container>Super discount! Free shipping for orders over $50 !!!</Container>;
 };
 
 export default Announcement;

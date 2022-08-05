@@ -244,11 +244,11 @@ const Cart = () => {
       <Navbar />
       <Announcement />
       <Wrapper>
-        <Title>Кошница</Title>
+        <Title>Cart</Title>
         <Top>
-         <Link to={"/"} > <TopButton>ПРОДЪЛЖИ ПАЗАРУВАНЕТО</TopButton>  </Link> 
+         <Link to={"/"} > <TopButton>Go shopping</TopButton>  </Link> 
           <TopTexts>
-            <TopText>Кошница({cart.products.length})</TopText>
+            <TopText>Cart({cart.products.length})</TopText>
             <TopText>Your Wishlist (0)</TopText>
           </TopTexts>
         
@@ -281,16 +281,16 @@ const Cart = () => {
                   <ProductPrice>
                     $ {product.price * product.quantity}
                   </ProductPrice>
-                  <RemoveButton onClick={() => handleRemoveItem(product._id)}>Премахни</RemoveButton>
+                  <RemoveButton onClick={() => handleRemoveItem(product._id)}>Remove</RemoveButton>
                 </PriceDetail>
               </Product>
             ))}
             <Hr />
           </Info>
           <Summary>
-            <SummaryTitle>Общо за поръчката:</SummaryTitle>
+            <SummaryTitle>Order summery:</SummaryTitle>
             <SummaryItem>
-              <SummaryItemText>Общо:</SummaryItemText>
+              <SummaryItemText>Total:</SummaryItemText>
               <SummaryItemPrice>$ {cart.total}</SummaryItemPrice>
             </SummaryItem>
             <SummaryItem>
@@ -302,7 +302,7 @@ const Cart = () => {
               <SummaryItemPrice>$ -5.90</SummaryItemPrice>
             </SummaryItem>
             <SummaryItem type="total">
-              <SummaryItemText>Общо:</SummaryItemText>
+              <SummaryItemText>Total:</SummaryItemText>
               <SummaryItemPrice>$ {cart.total}</SummaryItemPrice>
             </SummaryItem>
             <StripeCheckout

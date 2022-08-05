@@ -87,7 +87,7 @@ const Register = () => {
     const password = passwordRef.current.value;
 
    
-    let res = await axios.post ("http://localhost:5000/api/auth/register", {
+    let res = await axios.post ("https://md-shop-website.herokuapp.com/api/auth/register", {
         firstName,
         lastName,
         username,

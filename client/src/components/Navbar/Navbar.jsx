@@ -18,8 +18,8 @@ const Wrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
 
- 
 
   ${mobile({ padding: "10px 0px" })}
 `;
@@ -73,6 +73,8 @@ const MenuItem = styled.div`
   font-size: 14px;
   cursor: pointer;
   margin-left: 25px;
+
+ 
   ${mobile({ fontSize: "12px", marginLeft: "10px" })}
 `;
 
@@ -86,7 +88,7 @@ const Navbar = () => {
     <Container>
       <Wrapper>
         <Left>
-          <Language>БГ</Language>
+          <Language>EN</Language>
           <SearchContainer>
             <Input placeholder="Search" />
             <Search style={{ color: "gray", fontSize: 16 }} />
@@ -103,7 +105,7 @@ const Navbar = () => {
               to={"/register"}
               style={{ textDecoration: "none", color: "black" }}
             >
-              <MenuItem>РЕГИСТРАЦИЯ</MenuItem>
+              <MenuItem>REGISTRATION</MenuItem>
             </Link>
           )}
 
@@ -112,7 +114,7 @@ const Navbar = () => {
               to={"/login"}
               style={{ textDecoration: "none", color: "black" }}
             >
-              <MenuItem>ВХОД</MenuItem>
+              <MenuItem>LOGIN</MenuItem>
             </Link>
           )}
 
@@ -130,7 +132,7 @@ const Navbar = () => {
               </Badge>
             </MenuItem>
           </Link>
-        {user && <SettingsDropDown /> }  
+        { <SettingsDropDown /> }  
         </Right>
       </Wrapper>
     </Container>
