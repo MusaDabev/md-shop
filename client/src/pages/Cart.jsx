@@ -9,9 +9,9 @@ import StripeCheckout from "react-stripe-checkout";
 import { useEffect, useState } from "react";
 import { userRequest } from "../requestMethods";
 import { useHistory } from "react-router";
-import {Link} from 'react-router-dom';
-import {removeProduct} from '../redux/cartRedux';
-import {useDispatch} from 'react-redux'
+import { Link } from "react-router-dom";
+import { removeProduct } from "../redux/cartRedux";
+import { useDispatch } from "react-redux";
 
 const KEY = process.env.REACT_APP_STRIPE;
 
@@ -20,9 +20,8 @@ const Container = styled.div``;
 const Wrapper = styled.div`
   padding: 20px;
   @media only screen and (max-width: 868px) {
-   display: flex;
-   flex-direction: column;
-
+    display: flex;
+    flex-direction: column;
   }
   ${mobile({ padding: "10px" })}
 `;
@@ -51,8 +50,8 @@ const TopButton = styled.button`
 
 const TopTexts = styled.div`
   @media only screen and (max-width: 550px) {
-  display: flex;
-   flex-direction: column;
+    display: flex;
+    flex-direction: column;
   }
   ${mobile({ display: "none" })}
 `;
@@ -66,23 +65,19 @@ const Bottom = styled.div`
   display: flex;
   justify-content: space-between;
   @media only screen and (max-width: 868px) {
-   
-   flex-direction: column;
+    flex-direction: column;
   }
-
 `;
 
 const Info = styled.div`
   flex: 3;
-  
 `;
 
 const Product = styled.div`
   display: flex;
   justify-content: space-between;
   @media only screen and (max-width: 580px) {
-   
-   flex-direction: column;
+    flex-direction: column;
   }
 `;
 
@@ -90,9 +85,9 @@ const ProductDetail = styled.div`
   flex: 2;
   display: flex;
   @media only screen and (max-width: 580px) {
-   flex-direction: column;
-   align-items: center;
-   justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
 `;
 
@@ -188,42 +183,33 @@ const Button = styled.button`
   }
 `;
 
-const RemoveButton = styled.button `
-color: white;
-background-color: black;
-padding: 7px;
-margin-top: 10px;
-font-weight: 600;
+const RemoveButton = styled.button`
+  color: white;
+  background-color: black;
+  padding: 7px;
+  margin-top: 10px;
+  font-weight: 600;
   &:hover {
     cursor: pointer;
   }
 `;
 
 const Cart = () => {
- 
   const cart = useSelector((state) => state.cart);
   const dispatch = useDispatch();
- 
 
   const [stripeToken, setStripeToken] = useState(null);
   const history = useHistory();
 
   const onToken = (token) => {
     setStripeToken(token);
-   
   };
 
   const handleRemoveItem = (id) => {
-    dispatch(
-      removeProduct({id})
-    )
-    
-  }
+    dispatch(removeProduct({ id }));
+  };
 
-  const handleIncreaseQuantity = () => {
-    
-  }
-
+  const handleIncreaseQuantity = () => {};
 
   useEffect(() => {
     const makeRequest = async () => {
@@ -234,24 +220,27 @@ const Cart = () => {
         });
         history.push("/success", {
           stripeData: res.data,
-          products: cart, });
+          products: cart,
+        });
       } catch {}
     };
     stripeToken && makeRequest();
   }, [stripeToken, cart.total, history]);
-  return  (
+  return (
     <Container>
-      <Navbar />
       <Announcement />
+      <Navbar />
       <Wrapper>
         <Title>Cart</Title>
         <Top>
-         <Link to={"/"} > <TopButton>Go shopping</TopButton>  </Link> 
+          <Link to={"/"}>
+            {" "}
+            <TopButton>Go shopping</TopButton>{" "}
+          </Link>
           <TopTexts>
             <TopText>Cart({cart.products.length})</TopText>
             <TopText>Your Wishlist (0)</TopText>
           </TopTexts>
-        
         </Top>
         <Bottom>
           <Info>
@@ -281,7 +270,9 @@ const Cart = () => {
                   <ProductPrice>
                     $ {product.price * product.quantity}
                   </ProductPrice>
-                  <RemoveButton onClick={() => handleRemoveItem(product._id)}>Remove</RemoveButton>
+                  <RemoveButton onClick={() => handleRemoveItem(product._id)}>
+                    Remove
+                  </RemoveButton>
                 </PriceDetail>
               </Product>
             ))}

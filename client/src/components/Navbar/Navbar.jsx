@@ -132,7 +132,7 @@ const Navbar = () => {
               </Badge>
             </MenuItem>
           </Link>
-        { <SettingsDropDown /> }  
+        { user && <SettingsDropDown /> }  
         </Right>
       </Wrapper>
     </Container>

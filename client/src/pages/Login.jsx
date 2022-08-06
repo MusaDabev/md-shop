@@ -24,7 +24,17 @@ const Wrapper = styled.div`
   width: 25%;
   padding: 20px;
   background-color: white;
+
+  @media only screen and (max-width: 800px) {
+   width: 35%;
+  }
+
+  @media only screen and (max-width: 580px) {
+   width: 45%;
+  }
   ${mobile({ width: "75%" })}
+
+  
 `;
 
 const Title = styled.h1`
@@ -48,7 +58,7 @@ const Button = styled.button`
   width: 40%;
   border: none;
   padding: 15px 20px;
-  background-color: teal;
+  background-color: #747575;
   color: white;
   cursor: pointer;
   margin-bottom: 10px;

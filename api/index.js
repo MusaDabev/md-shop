@@ -11,7 +11,7 @@ const orderRoute = require("./routes/order");
 const stripeRoute = require("./routes/stripe");
 const cors = require("cors");
 
- header("Access-Control-Allow-Origin: *");
+ 
 mongoose
   .connect(process.env.MONGO_URL)
   .then(() => console.log("DB Connection Successfull!"))
@@ -20,7 +20,12 @@ mongoose
   });
 
 app.use(cors());
+
 app.use(express.json());
+app.get("/", (req, res)=> {
+    res.send("server is up and running")
+   
+})
 app.use("/api/auth", authRoute);
 app.use("/api/users", userRoute);
 app.use("/api/products", productRoute);

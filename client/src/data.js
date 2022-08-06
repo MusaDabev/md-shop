@@ -9,8 +9,8 @@ export const sliderItems = [
     {
       id: 2,
       img: "https://i.ibb.co/DG69bQ4/2.png",
-      title: "ЛЯТНА КОЛЕКЦИЯ",
-      desc: "НЕ ПРАВИ КОМПОРМИС СЪС СТИЛА! ПОЛУЧИ 30% ОТСТЪПКА ЗА НОВИ АРТИКУЛИ.",
+      title: "SUMMER COLLECTION",
+      desc: "DON'T MAKE COMPOMISES WITH YOUR STYLE! GET 30% DISCOUNT FOR NEW PRODUCTS",
       bg: "fcf1ed",
     },
     {
@@ -26,20 +26,20 @@ export const sliderItems = [
     {
       id: 1,
       img: "https://images.pexels.com/photos/5886041/pexels-photo-5886041.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-      title: "РИЗИ",
+      title: "WOMEN",
       cat:"women"
     },
     {
       id: 2,
-      img: "https://images.pexels.com/photos/2983464/pexels-photo-2983464.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-      title: "LOUNGEWEAR LOVE",
-      cat:"coat"
+      img: "https://images.pexels.com/photos/842811/pexels-photo-842811.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      title: "MEN",
+      cat:"man"
     },
     {
       id: 3,
-      img: "https://images.pexels.com/photos/5480696/pexels-photo-5480696.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
-      title: "LIGHT JACKETS",
-      cat:"jeans"
+      img: "https://images.pexels.com/photos/1619697/pexels-photo-1619697.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      title: "KIDS",
+      cat:"kids"
     },
   ];
 

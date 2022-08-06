@@ -119,7 +119,7 @@ const Amount = styled.span`
   width: 30px;
   height: 30px;
   border-radius: 10px;
-  border: 1px solid teal;
+  border: 1px solid #747575;;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -128,7 +128,7 @@ const Amount = styled.span`
 
 const Button = styled.button`
   padding: 15px;
-  border: 2px solid teal;
+  border: 2px solid #747575;;
   background-color: white;
   cursor: pointer;
   font-weight: 500;
@@ -183,8 +183,8 @@ const Product = () => {
  }
   return (
     <Container>
-      <Navbar />
       <Announcement />
+      <Navbar />
       <Wrapper>
         <ImgContainer>
           <Image src={product.img} />

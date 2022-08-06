@@ -24,6 +24,9 @@ const Wrapper = styled.div`
   width: 40%;
   padding: 20px;
   background-color: white;
+  @media only screen and (max-width: 640px) {
+   width: 55%;
+  }
   ${mobile({ width: "75%" })}
 `;
 

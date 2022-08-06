@@ -15,13 +15,20 @@ const Products = ({ cat, filters, sort }) => {
   const [products, setProducts] = useState([]);
   const [filteredProducts, setFilteredProducts] = useState([]);
 
+  const config = {
+    headers:{
+      "Access-Control-Allow-Origin": "*",
+      
+    }
+  };
+
   useEffect(() => {
     const getProducts = async () => {
       try {
         const res = await axios.get(
           cat
             ? `https://md-shop-website.herokuapp.com/api/products?category=${cat}`
-            : "https://md-shop-website.herokuapp.com/api/products"
+            : "https://md-shop-website.herokuapp.com/api/products", config
         );
         setProducts(res.data);
       } catch (err) {}
