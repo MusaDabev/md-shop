@@ -18,10 +18,15 @@ State management:
 
 Payment:
 - Strype
-- 
-![Alt text](https://i.postimg.cc/zfJS57DZ/homepage1.jpg "Optional title")
 
 Live version: https://md-shop.netlify.app/
+
+\textbf{Screenshots}
+Home page
+![Alt text](https://i.postimg.cc/9FW02HP3/homepage1.jpg)
+![Alt text](https://i.postimg.cc/7Ym6YtX5/homepage2.jpg)
+![Alt text](https://i.postimg.cc/YC0S4Nyb/homepage3.png)
+![Alt text](https://i.postimg.cc/44vyjx9b/homepage4.png)
 
 Show your support
 
