@@ -30,7 +30,8 @@ Online shop where you can choose your favourite products, add them to cart and b
 - HTML
 - CSS
 - React
-- Material UI
+- Material UI - icons
+- Styled components
 
 ### Back-end:
 - Node.js
